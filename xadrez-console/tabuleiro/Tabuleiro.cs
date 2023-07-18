@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace tabuleiro
 {
     class Tabuleiro
@@ -14,17 +9,24 @@ namespace tabuleiro
         private int v1;
         private int v2;
 
-        public Tabuleiro(int linhas, int colunas, Peca[,] pecas)
+        /*public Tabuleiro(int linhas, int colunas, Peca[,] pecas)
         {
             this.linhas = linhas;
             this.colunas = colunas;
             pecas = new Peca[linhas,colunas];
         }
+        */
 
-        public Tabuleiro(int v1, int v2)
+        public Tabuleiro(int linhas, int colunas)
         {
-            this.v1 = v1;
-            this.v2 = v2;
+            this.linhas = linhas;
+            this.colunas = colunas;
+            pecas = new Peca[linhas, colunas];
+        }
+
+        public Peca peca ( int linha, int coluna)
+        {
+            return pecas[linha, coluna];
         }
     }
 }

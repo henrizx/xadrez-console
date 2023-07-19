@@ -8,11 +8,11 @@
         public Tabuleiro tab { get; protected set; }
 
 
-        public Peca(posicao Posicao, Tabuleiro tab, Cor cor)
+        public Peca( Tabuleiro tab, Cor cor)
         {
             this.tab = tab;
             this.cor = cor;
-            this.Posicao = Posicao;
+            this.Posicao = null;
             this.qteMovimentos = 0;
         }
         

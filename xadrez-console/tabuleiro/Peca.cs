@@ -15,6 +15,10 @@
             this.Posicao = null;
             this.qteMovimentos = 0;
         }
+        public void incrementatQtMovimentos()
+        {
+            qteMovimentos++;
+        }
         
     }
 }

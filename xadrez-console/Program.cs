@@ -10,13 +10,21 @@ namespace xadrez_console
             try
             {
                PartidaDeXadrez partida = new PartidaDeXadrez();
-                while (!partida.terminada)
+                while (!partida.terminada) 
                 {
                     Console.Clear();
                     Tela.imprimeTabuleiro(partida.tab);
                     Console.WriteLine();
                     Console.Write("Digite a posição de origem: ");
                     posicao origem = Tela.lerPosicaoXadrez().toPosicao();
+
+
+                    bool[,] posicoesPossiveis = partida.tab.peca(origem).movimentosPossiveis();
+
+                    Console.Clear();
+                    Tela.imprimeTabuleiro(partida.tab, posicoesPossiveis);
+
+
                     Console.Write("Destino: ");
                     posicao destino = Tela.lerPosicaoXadrez().toPosicao();
 

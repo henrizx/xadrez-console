@@ -1,6 +1,4 @@
-﻿
-
-namespace tabuleiro
+﻿namespace tabuleiro
 {
     class TabulerioException : Exception
     {

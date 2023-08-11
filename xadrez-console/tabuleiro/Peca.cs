@@ -19,6 +19,11 @@
         {
             qteMovimentos++;
         }
+
+        public void decrementaMoviemnto()
+        {
+            qteMovimentos--;
+        }
         public bool existeMovimentosPossiveis()
         {
             bool[,] mat = movimentosPossiveis();
@@ -33,6 +38,10 @@
                 }
             }
             return false;
+        }
+        public bool podeMoverPara(posicao pos)
+        {
+            return movimentosPossiveis()[pos.Linha, pos.Coluna];
         }
 
         public abstract bool[,] movimentosPossiveis();

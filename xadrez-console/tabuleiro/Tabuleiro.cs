@@ -74,5 +74,10 @@ namespace tabuleiro
                 throw new TabulerioException("Posição invalida!");
             }
         }
+
+        internal object peca(object origem)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
